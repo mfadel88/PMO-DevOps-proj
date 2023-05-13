@@ -22,7 +22,7 @@ resource "aws_subnet" "PRI-SN2" {
 resource "aws_subnet" "PUB-SN1" {
   vpc_id     = aws_vpc.main-vpc.id
   cidr_block = var.PUB-SN1-cider
-  availability_zone = "us-east-2"
+  availability_zone = "us-east-1"
   tags = {
     Name = "PUB-SN1"
   }
@@ -33,7 +33,7 @@ resource "aws_subnet" "PUB-SN1" {
 resource "aws_subnet" "PUB-SN2" {
   vpc_id     = aws_vpc.main-vpc.id
   cidr_block = var.PUB-SN2-cider
-  availability_zone = "us-east-1b"
+  availability_zone = "us-east-2"
   tags = {
     Name = "PUB-SN2"
   }

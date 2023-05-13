@@ -12,7 +12,7 @@ resource "aws_route_table" "PRI-RT" {
 resource "aws_route" "PRI-rout" {
   route_table_id = aws_route_table.PRI-RT.id
   destination_cidr_block = "0.0.0.0/0"
-  gateway_id = aws_nat_gateway.NAT.id
+  gateway_id = aws_nat_gateway.ng.id
 }
 
 resource "aws_route_table_association" "PRI-SN1-ASS" {

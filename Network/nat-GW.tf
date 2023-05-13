@@ -2,7 +2,7 @@ resource "aws_eip" "elastic-ip" {
   # instance = aws_instance.web.id
   vpc      = true
 }
-resource "aws_nat_gateway" "example" {
+resource "aws_nat_gateway" "ng" {
   allocation_id = aws_eip.elastic-ip.id
   subnet_id     = aws_subnet.PUB-SN1.id
 
